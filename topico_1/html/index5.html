@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+     <meta charset="utf-8">
+     <title>CPW - Formulários</title>
+     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    </head> 
+    <body>
+
+        <form id="formindex5" action="#" method="post">
+
+            <label for="nome">Nome:<label>
+            <input id="nome" type="text" name="nome">            
+                
+            <label for="sobrenome">Sobrenome:<label>
+            <input id="sobrenome" type="text" name="sobrenome">
+
+            <input type="submit" value="Salvar">
+
+        </form>
+
+    </body>
+
+    <script type="text/javascript">
+
+            $('#formindex5').bind('submit', function () {
+
+                var nome = $("input[name='nome']",this).val();
+                alert(nome);
+
+                var sobrenome = $("input[name='sobrenome']",this).val();
+                alert(sobrenome);
+
+            });
+
+    </script>
+
+</html>
