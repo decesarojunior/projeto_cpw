@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Formulários</title>
+        <link rel="stylesheet" type="text/css" href="css/estilos.css"/>
+        <style>
+
+            #paragrafo1 {
+                text-align: center;
+                color: rgb(255, 0, 0);
+            }
+
+            #paragrafo2 {
+                text-align: left;
+                color: rgb(0, 255, 0);
+            }
+            
+            .sublinhado {
+
+                text-decoration: underline
+            }
+
+        </style>
+    </head> 
+    <body>
+
+        <div id=“principal”>
+
+            <div id=“menu”>
+                <!--https://developer.mozilla.org/pt-BR/docs/Web/CSS/text-decoration -->
+                <p id="paragrafo1" class="sublinhado">Formulário para Cadastro Cliente.</p>
+
+            </div>
+
+            <div id=“formulario”>
+
+                <p  id="paragrafo2" >Preencha os campos abaixo: </p>                
+
+                <form id="formindex5" action="#" method="post">
+
+                    <div>
+
+                        <!--https://developer.mozilla.org/pt-BR/docs/Web/CSS/font-weight-->
+
+                        <label id="lblNome" for="nome" style="font-weight: bold;">Nome:<label>
+                        <input id="nome" type="text" name="nome">          
+                    </div>
+
+                    <div>
+                        <label id="lblEndereco" for="endereco" style="font-weight: bold;">Endereço:<label>
+                        <input id="endereco" type="text" name="endereco">
+                    </div>
+
+                    <input type="submit" value="Salvar">
+        
+                </form>
+
+            </div>
+            <div>
+                <p class="fonte">CSS: seletores através do ID: Especifica o estilo a ser aplicado em apenas um determinado elemento. Definido com um #. Dessa forma, referencia o atributo "id" do elemento HTML  a ser aplciado o estilo.</div>
+            </div>
+
+        </div>
+
+    </body>
+
+</html>

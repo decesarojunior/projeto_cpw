@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Formulários estilados : CSS e modelo de caixa </title>
+        <link rel="stylesheet" type="text/css" href="css/estilos.css"/>
+        <style>
+
+            #paragrafo1 {
+                text-align: center;
+                color: rgb(255, 0, 0);
+            }
+
+            #paragrafo2 {
+                text-align: left;
+                color: rgb(0, 255, 0);
+            }
+            
+            .sublinhado {
+
+                text-decoration: underline
+            }
+
+            div.boxmodel1 {
+
+                margin: 30px;
+                width: auto;
+                height: auto;
+                border: 1px;
+                border-style: solid;
+                border-color: black;
+                padding: 10px;                
+                background: rgb(248, 188, 188);
+                color: rgb(7, 7, 7);                
+            }
+
+        </style>
+    </head> 
+    <body>
+
+        <div id=“principal”>
+
+            <div id=“menu”>
+                <!--https://developer.mozilla.org/pt-BR/docs/Web/CSS/text-decoration -->
+                <p id="paragrafo1" class="sublinhado">Formulário para Cadastro Cliente  - BoxModel.</p>
+
+            </div>
+
+            <div id=“formulario”>
+
+                <p  id="paragrafo2" >Preencha os campos abaixo: </p>                
+
+                <form id="formindex5" action="#" method="post">
+
+                    <div class="boxmodel1">
+
+                        <!--https://developer.mozilla.org/pt-BR/docs/Web/CSS/font-weight-->
+
+                        <label id="lblNome" for="nome" style="font-weight: bold;">Nome:<label><br>
+                        <input id="nome" type="text" name="nome">          
+                    </div>
+
+                    <div class="boxmodel1">
+                        <label id="lblEndereco" for="endereco" style="font-weight: bold;">Endereço:<label><br>
+                        <input id="endereco" type="text" name="endereco">
+                    </div>
+
+                    <input type="submit" value="Salvar">
+        
+                </form>
+
+            </div>
+            <div>
+                <p class="fonte">BoxModel: o modelo de caixa para design com CSS consiste em:<p>
+                    <ul>
+                        <li>Uma "caixa" que envolve o elemento e é subdividida em:</li>
+                        <ul>
+                            <li>margem: propriedades width e height</li>
+                            <li>borda</li>
+                            <li>preenchimento</li>
+                            <li>conteúdo</li>
+                        <ul>
+                    </ul>
+            </div>
+
+        </div>
+
+    </body>
+
+</html>
