@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Formulários: floats </title>        
+        <style>
+
+            .titulo_centralizado {
+                text-align: center;
+                color: rgb(0, 0, 0);
+                font-weight: bold;             
+            }
+            
+            .boxmodel_painel {
+
+                margin: 30px;
+                width: 40%;
+                height: auto;
+                border: 1px;
+                border-style: solid;
+                border-color: black;
+                padding: 10px;                
+                background: rgb(248, 188, 188);
+                color: rgb(7, 7, 7);
+                float: left;             
+            }
+
+            .boxmodel_group {
+
+                margin: 10px;
+                width: auto;
+                height: auto;                                
+                padding: 5px;                
+            }
+
+            .boxmodel_footer {
+
+                margin: 30px;
+                width: 87%;
+                height: auto;                                
+                padding: 5px;
+                border: 1px;
+                border-style: solid; 
+                border-color: black;
+                text-align: center;
+                clear: both;        
+            }
+
+        </style>
+    </head> 
+    <body>
+
+        <div id=“principal”>
+            
+            <div id=“menu”>                
+                <p class="titulo_centralizado">Cadastro Cliente</p>
+            </div>
+
+            <form id="formindex5" action="#" method="get">
+
+                <div class="boxmodel_painel">                    
+                    
+                    <div class="boxmodel_group">                    
+                        <label id="lblNome" for="nome" style="font-weight: bold;">Nome:<label><br>
+                        <input id="nome" type="text" name="nome">
+                    </div>
+
+                    <div class="boxmodel_group">                    
+                        <label id="lblCPF" for="idCPF" style="font-weight: bold;">CPF:<label><br>
+                        <input id="idCPF" type="text" name="cpf" maxlength="11">
+                    </div>
+
+                    <div class="boxmodel_group">                    
+                        <label id="lblDTNascimento" for="dtNascimento" style="font-weight: bold;">Data de Nascimento:<label><br>
+                        <input id="dtNascimento" type="date" name="dtnascimento">
+                    </div>
+
+                    
+                </div>
+
+                <div class="boxmodel_painel">     
+
+                    <div class="boxmodel_group">                    
+                        <label id="lblEndereco" for="endereco" style="font-weight: bold;">Endereço:<label><br>
+                        <input id="endereco" type="text" name="endereco">    
+                    </div>
+                    
+                    <div class="boxmodel_group">                    
+                        <label id="lblComplemento" for="idComplemento" style="font-weight: bold;">Complemento:<label><br>
+                        <input id="idComplemento" type="text" name="endereco">    
+                    </div>
+
+                    <div class="boxmodel_group">                    
+                        <label id="lblNumero" for="idNumero" style="font-weight: bold;">Número:<label><br>
+                        <input id="idNumero" type="number" name="numero">    
+                    </div>
+
+                </div>
+
+
+
+                <div class="boxmodel_footer">                    
+                    
+                    <input type="submit" value="Salvar" onclick="alert('salvando informações ...');">    
+
+                </div>
+
+                
+
+                
+    
+            </form>
+
+            
+
+
+        </div>
+
+    </body>
+
+</html>
