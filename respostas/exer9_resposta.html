@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>     
+
+    <!--9) Códifique uma página em HTML contendo cabeçalho, corpo e rodapé. 
+        No cabeçalho defina um título. No corpo um formulário que deverá ter 
+        no mínimo dez campos para preenchimento (text, checkbox, select, etc.) agrupados em dois blocos (lado a lado).
+        Na parte inferior, deverá ter um botão (Enviar), que ao ser clicado deverá exibir uma mensagem.        
+        Para a estilização, organize os estilos em classes, armazenadas no arquivo ../css/estilos.css.
+
+        Com base no conceito de boxmodel, cada bloco deve ocupar 35% da largura disponível da página.
+        Margem de 10px. Altura variável, borda pontilhada de 1px de cor azul forte e cor de fundo azul claro. 
+        Os dois blocos devem estar na mesma altura (float: left)
+
+        Para as divs localizadas dentros dos blocos, margem de 5px, espaçamento  entre a borda e o conteúdo de 5px, 
+        altura e largura variável. Não aplique cor de fundo.
+        
+        O botão de enviar deve estar localizado abaixo dos dois blocos (segunda linha, em novo fluxo. portanto, "clear: both"), 
+        ocupando toda a largura da página e centralizado.
+    -->
+
+    <head>
+        <meta charset="utf-8">
+        <title>Resposta para o exercício 9</title>
+        <link rel="stylesheet" type="text/css" href="css/estilos.css"/>
+    </head>
+    <body>
+        <div>
+            <form>
+
+                <div id="bloco1" class="divbloco">
+                    <div class="divgroup">
+                        <label id="rotuloNome" for="inputNome">Nome:</label>
+                        <input type="text" maxlength="100" id="inputNome"/>
+                    </div>
+    
+                    <div class="divgroup">
+                        <label id="rotuloDtNasc" for="inputDtNasc">Data de Nascimento:</label>
+                        <input type="date" id="inputDtNasc"/>
+                    </div>                 
+                    <div class="divgroup">
+                        <label id="rotuloSenha" for="inputSenha">Senha:</label>
+                        <input type="password" width="10" id="inputSenha"/>
+                    </div>
+    
+                    <div class="divgroup">
+                        <label id="rotuloEmail" for="inputEmail">E-mail:</label>
+                        <input type="email" id="inputEmail"/>
+                    </div>                
+                                
+                    <div class="divgroup">
+                        <label id="rotuloSituacao" for="inputSituacao">Situação:</label>
+                        <input type="checkbox" id="inputSituacao"/>
+                    </div>
+
+                </div>
+                <div id="bloco2" class="divbloco">
+
+                    <div  class="divgroup">
+                        <label id="rotuloCidade" for="selectCidade">Cidade:</label>
+                        <select id="selectCidade">
+                            <option value="1">Passo Fundo</option>
+                            <option value="2">Marau</option>
+                            <option value="3">Coxilha</option>
+                            <option value="4">Pontão</option>
+                        </select>
+                    </div>
+
+                    <div  class="divgroup">
+                        <label id="rotuloHabilidades" for="datalistHabilidades">Habilidades:</label>
+                        <input list="datalistHabilidades">
+                        <datalist id="datalistHabilidades">
+                            <option value="1">Front-end</option>
+                            <option value="2">Back-end</option>                            
+                        </datalist>
+                    </div>
+                    
+                    <div  class="divgroup">
+                        <label id="rotuloNivel" for="inputNivel">Nível:</label>
+                        <input type="range" id="inputNivel"/>
+                    </div>
+
+                    <div  class="divgroup">
+                        <label id="rotuloFoto" for="inputFoto">Foto:</label>
+                        <input type="file" id="inputFoto"/>
+                    </div>
+                    
+                    <div  class="divgroup">
+                        <label name="rotuloLinguagens" for="selectLinguagens">Linguagens:</label>
+                        <input id="inputJava" name="inputLinguagem" type="radio">Java
+                        <input id="inputPHP" name="inputLinguagem" type="radio">PHP
+                        <input id="inputC" name="inputLinguagem" type="radio">C#
+                        <input id="inputPascal" name="inputLinguagem" type="radio">Pascal
+                    </div>               
+
+                </div>
+
+                <div class="divrodape">
+                    <input type="submit" value="Enviar"/>
+                </div>                                        
+
+            </form>
+
+        </div>
+
+    </body>    
+    <footer>        
+
+    </footer>
+
+</html>

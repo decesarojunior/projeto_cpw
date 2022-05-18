@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+     <!-- 5) Implemente um imput em HTML para cada item da lista abaixo 
+    
+            <ul>            
+
+            <li><b>type:</b> password</li>            
+
+            <li><b>type:</b> checkbox</li>
+
+            <li><b>type:</b> radio</li>            
+
+            <li><b>type:</b> datetime</li>
+
+            <li><b>type:</b> email</li>
+
+            <li><b>type:</b> file</li>
+
+            <li><b>type:</b> hidden</li>
+
+            <li><b>type:</b> image</li>
+
+            <li><b>type:</b> button</li>
+
+            <li><b>type:</b> range</li>
+
+        </ul>
+    
+    -->
+
+    <head>
+        <meta charset="utf-8">
+        <title>Resposta para o exercício 5</title>
+        <style>
+
+            .container {                
+                width: 25%;                
+                height: auto;
+                margin-top: 10%;
+                margin-left: 40%;     
+                background-color: green;           
+            }
+            .formcontrol {
+                margin: 5px;
+                padding: 5px;                
+            }
+            .formsubmit {
+                margin-left: 40%;                                             
+            }            
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <form>
+                <div class="formcontrol">
+                    <label id="rotuloNome" for="inputNome">Nome:</label>
+                    <input type="text" maxlength="100" id="inputNome"/>
+                </div>
+
+                <div class="formcontrol">
+                    <label id="rotuloDtNasc" for="inputDtNasc">Data de Nascimento:</label>
+                    <input type="date" id="inputDtNasc"/>
+                </div>
+             
+                <div class="formcontrol">
+                    <label id="rotuloSenha" for="inputSenha">Senha:</label>
+                    <input type="password" width="10" id="inputSenha"/>
+                </div>
+
+                <div class="formcontrol">
+                    <label id="rotuloEmail" for="inputEmail">E-mail:</label>
+                    <input type="email" id="inputEmail"/>
+                </div>                
+                
+                <div class="formcontrol">
+                    <label id="rotuloImagem" for="inputImagem">Imagem:</label>
+                    <input type="image" id="inputImagem"/>
+                </div>
+
+                <div class="formcontrol">
+                    <label id="rotuloSituacao" for="inputSituacao">Situação:</label>
+                    <input type="checkbox" id="inputSituacao"/>
+                </div>
+
+                <div class="formcontrol">
+                    <label id="rotuloIntervalo" for="inputIntervalo">Intervalo:</label>
+                    <input type="range" id="inputIntervalo" value="0"/>
+                </div>
+                <div class="formcontrol">
+                    <label>Ferramentas:</label><br>
+                </div>
+                
+                <div class="formcontrol" style="margin-left: 20px;">                    
+                    <input type="radio" id="html" name="fav_language" value="HTML">
+                    <label for="html">HTML</label><br>
+                </div>
+                
+                <div class="formcontrol" style="margin-left: 20px;">
+                    <input type="radio" id="css" name="fav_language" value="CSS">
+                    <label for="css">CSS</label><br>
+                </div>
+                
+                <div class="formcontrol" style="margin-left: 20px;">
+                    <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                    <label for="javascript">JavaScript</label> 
+                </div>
+                
+                <div class="formsubmit">
+                    <input type="hidden" value="123"/>
+                    <input type="submit" value="Exluir"/>
+                    <input type="image" id="inputEnviar" src="imagens/send.png" value="Enviar"/>
+                </div>                
+                
+
+            </form>
+
+        </div>
+
+    </body>    
+    <footer>
+        <p class="formsubmit">Preencha o formulário e clique no botão Submeter.</p>
+    </footer>
+
+</html>

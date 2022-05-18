@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <!-- 4) Códifique uma página em HTML contendo cabeçalho, corpo e rodapé. 
+        No cabeçalho defina um título. No corpo um formulário que deverá ter 
+        no mínimo três campos para preenchimento (texto, data e submição) 
+        e um botão. No rodapé um texto/imagem -->
+    <head>
+        <meta charset="utf-8">
+        <title>Resposta para o exercício 4</title>
+        <style>
+            .container {                
+                width: 25%;                
+                height: auto;
+                margin-top: 20%;
+                margin-left: 40%;     
+                background-color: green;           
+            }
+            .formcontrol {
+                margin: 5px;
+                padding: 5px;                
+            }
+            .formsubmit {
+                margin-left: 40%;                                             
+            }            
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <form>
+                <div class="formcontrol">
+                    <label id="rotuloNome" for="inputNome">Nome:</label>
+                    <input type="text" maxlength="100" id="inputNome"/>
+                </div>
+
+                <div class="formcontrol">
+                    <label id="rotuloDtNasc" for="inputDtNasc">Data de Nascimento:</label>
+                    <input type="date" id="inputDtNasc"/>
+                </div>
+                
+                <div class="formsubmit">
+                    <input type="submit" value="Submeter"/>
+                </div>                
+
+            </form>
+
+        </div>
+
+    </body>    
+    <footer>
+        <p class="formsubmit">Preencha o formulário e clique no botão Submeter.</p>
+    </footer>
+
+</html>
