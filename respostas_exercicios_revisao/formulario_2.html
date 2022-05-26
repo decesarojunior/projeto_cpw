@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>     
+
+    <head>
+        <meta charset="utf-8">
+        <title>Questão 2 - Formulários</title>
+        <style>
+            .form{
+                margin-left: 30%;
+                margin-right: 30%;
+                
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="form">
+
+            <h3 style="background-color: YELLOW;">SISTEMA DE GESTÃO ACADÊMICA</h3>
+            <h3>Manutenção de Usuários dos Sistema Interno</h3>
+            <form>
+                <div>
+                    <div style="float: left;width: 30%;">
+                        <label id="rotuloLogin" for="inputLogin"><strong>Login:</strong></label>                    
+                    </div>
+                    <input type="text" maxlength="100" id="inputLogin"/>             
+                </div>
+
+                <div>
+                    <div style="float: left;width: 30%;">
+                        <label id="rotuloSenha" for="inputSenha"><strong>Senha:</strong></label>                    
+                    </div>
+                    <input type="password" id="inputSenha"/>
+                </div>
+             
+                <div >
+                    <div style="float: left;width: 30%;">
+                        <label id="rotuloStatus" for="inputStatus"><strong>Status:</strong></label>
+                    </div>
+                    <select>
+                        <option selected>Inativo</option>
+                        <option >Ativo</option>
+                    </select>
+                </div>
+
+                <div>
+                    <div style="float: left;width: 30%;">
+                        <label id="rotuloTipo" for="inputTipo"><strong>Tipo:</strong></label>
+                    </div>
+                    <input type="radio" id="inputSenha" name="tipo"/>Técnico
+                    <input type="radio" id="inputSenha" name="tipo"/>Professor
+                    <input type="radio" id="inputSenha" name="tipo"/>Aluno
+                </div>
+
+                <div>
+                    <div style="float: left;width: 30%;">
+                        <label id="rotuloData" for="inputData"><strong>Data Criação:</strong></label>
+                    </div>
+                    <input type="date" id="inputData"/>
+                </div>
+
+                <div>
+                    <div style="float: left;width: 30%;">
+                        <label id="rotuloPerfil" for="inputPerfil"><strong>Perfil:</strong></label>
+                    </div>
+                    <input type="radio" id="inputPerfil" name="perfil"/>Convidado
+                    <input type="radio" id="inputPerfil" name="perfil"/>Administrador
+                </div>
+
+                <div>
+                    <div style="float: left;width: 30%;">
+                        <label id="rotuloObservacoes" for="inputObservacoes"><strong>Observações:</strong></label><br>
+                    </div>
+                    <textarea id="inputObservacoes" rows="8" cols="30"></textarea>
+                </div>
+                
+                
+                <br>                 
+                <div id="divsumbit">
+                    <input type="submit" value="Cadastrar"/>
+                    <input type="reset" value="Excluir"/>
+                </div>                                        
+
+            </form>
+
+        </div>
+
+    </body>    
+    <footer>
+        
+
+
+    </footer>
+
+</html>

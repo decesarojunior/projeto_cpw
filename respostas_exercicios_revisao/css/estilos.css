@@ -1,0 +1,38 @@
+.fundoAmarelinho{
+    background-color: aliceblue;
+}
+
+.fundoVerdinho{
+    background-color: green;
+}
+
+.textoazul{
+    text-align: justify;
+    color: blue;
+}
+
+.titulo{
+    text-align: center;
+    color: green;
+}
+
+.subtitulo{
+    text-align: left;
+    color: green;
+}
+
+.textopreto{
+    text-align: left;
+    color: black;
+}
+
+.textovermelho{
+    text-align: right;
+    color: red;
+}
+
+
+.textoamarelo{
+    text-align: left;
+    color: yellow;
+}

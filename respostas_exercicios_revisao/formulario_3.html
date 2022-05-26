@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>     
+
+    <head>
+        <meta charset="utf-8">
+        <title>Questão 3 - Formulários</title>
+        <style>
+            .form{
+                margin-top: 5%;
+                margin-left: 20%;
+                margin-right: 10%;                
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="form" id="form2" style="width: 80%;">
+            <table border="0">
+                <tr>
+                    <td><p style="background-color: blue;width: 100%;">Não é associado. Faça seu cadastro</p></td>
+     
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label>Nome</label>
+                        <input type="text" style="width: 88%;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Bairro</label>
+                        <input type="text">
+                    </td>
+                    <td>
+                        <label>Cidade</label>
+                        <input type="text" style="width: 73%;">
+                    </td>
+
+                </tr>
+            
+            </table>
+        
+        </div>
+
+        <div class="form" id="form2" style="width: 80%;">
+
+            <div>
+                <div style="float: left;width: 40%;background-color: blue;">Não é associado Faça seu cadastro</div>
+                <div style="float: left;width: 30%;background-color: rgb(5, 5, 99);">....</div>
+            </div>
+         
+            <div style="clear: both;">
+                <div style="float: left;width: 5%;">
+                    <label id="rotuloLogin" for="inputLogin">Nome:</label>                    
+                </div>                
+                <div style="float: rigth;">
+                    <input type="text" maxlength="100" id="inputLogin"/>
+                </div>
+            </div>
+
+            <div>
+                <div style="float: left;width: 5%;">
+                    <label id="rotuloSenha" for="inputSenha">Senha:</label>                    
+                </div>                
+                <div style="float: rigth;">
+                    <input type="password" id="inputSenha"/>
+                </div>
+            </div>
+
+            <div >
+                <div style="float: left;width: 5%;">
+                    <label id="rotuloStatus" for="inputStatus">Status:</label>
+                </div>
+                <div style="float: rigth;">
+                    <select>
+                        <option selected>Inativo</option>
+                        <option >Ativo</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <div style="float: left;width: 5%;">
+                    <label id="rotuloData" for="inputData"><strong>Data:</strong></label>
+                </div>
+                <div style="float: rigth;">
+                    <input type="date" id="inputData"/>
+                </div>
+            </div>
+
+            <div>
+                
+                <div style="float: left;width: 40%;">
+            
+                    <div style="float: left;width: 13%;">
+                        <label id="rotuloBairro" for="inputCep">Bairro:</label>
+                    </div>
+                    <div style="float: rigth;">
+                        <input type="text" id="inputBairro"/>  
+                    </div>
+                    
+                </div>                
+                <div style="float: left;width: 40%;">
+            
+                    <div style="float: left;width: 10%;">
+                        <label id="rotuloCidade" for="inputCidade">Cidade:</label>
+                    </div>
+                    <div style="float: rigth;">
+                        <input type="text" id="inputCidade"/>  
+                    </div>
+                </div>
+              
+            </div>
+
+            <div>
+                
+                <div style="float: left;width: 40%;">
+            
+                    <div style="float: left;width: 13%;">
+                        <label id="rotuloCep" for="inputCEP">CEP:</label>
+                    </div>
+                    <div style="float: rigth;">
+                        <input type="text" id="inputCEP"/>  
+                    </div>
+                    
+                </div>                
+                <div style="float: left;width: 40%;">
+            
+                    <div style="float: left;width: 10%;">
+                        <label id="rotuloUF" for="inputUF">UF:</label>
+                    </div>
+                    <div style="float: rigth;">
+                        <select id="selectUF">
+                            <option id="1">RS</option>
+                            <option id="2">SC</option>
+                        </select>  
+                    </div>
+                </div>
+              
+            </div>
+
+
+
+            <div style="clear: both;">Deseja receber informações sobre os seguintes assuntos abaixo:</div>
+
+            <div>
+
+                <input type="checkbox" id="inputTecnologia" name="perfil"/>Tecnologia
+                <input type="checkbox" id="inputEsportes" name="perfil"/>Esportes
+            </div>
+
+            
+            <div id="divsumbit" style="clear: both;">
+                <input type="submit" value="Confirmar"/>
+                <input type="reset" value="Retornar"/>
+            </div> 
+
+        </div>
+
+        <div id="form3">
+
+        </div>
+
+    </body>    
+    <footer>
+        
+
+
+    </footer>
+
+</html>
