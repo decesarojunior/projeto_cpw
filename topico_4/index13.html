@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript, entrada de dados e conversões - 13º Exemplo</title>
+        <script>
+            var n1, n2, soma;
+
+            //Documentação sobre o pacote Window: https://www.w3schools.com/jsref/met_win_prompt.asp
+
+            //The prompt() method displays a dialog box that prompts the user for input.
+            //The prompt() method returns the input value if the user clicks "OK", otherwise it returns null.
+            n1 = prompt("Informe um número inteiro : ");
+
+            n2 = prompt("Informe um novo número inteiro: ");
+
+            //como o prompt retorna uma String é necessário fazer a conversão. para inteiro.
+            //documentação sobre o método parseInt: https://www.w3schools.com/jsref/jsref_parseint.asp
+            soma= parseInt(n1) + parseInt(n2);
+
+        </script>
+    </head>
+    <body>
+        <p><span>
+            <strong>Soma:</strong>
+            </span>
+            <script>
+                 //documentacao sobre o método write: https://www.w3schools.com/jsref/met_doc_write.asp
+                 document.write(soma);
+            </script>   
+        </p>
+    </body>
+</html>  

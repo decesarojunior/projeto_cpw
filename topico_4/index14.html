@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript acessando elemento HTML - 14º Exemplo</title>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    </head>
+    <body>
+        <p><span>
+                <strong>Soma:</strong>
+                <input type="text" id="idResultado" name="resultado">
+            </span>
+        </p>
+
+    </body>
+    <script>
+        //para executar uma function assim que o documento html esteja pronto:
+        //documentação sobre jquery: https://www.w3schools.com/jquery
+        $(document).ready(function() {
+
+            var n1, n2, soma;
+
+                //Documentação sobre o pacote Window: https://www.w3schools.com/jsref/met_win_prompt.asp
+
+                //The prompt() method displays a dialog box that prompts the user for input.
+                //The prompt() method returns the input value if the user clicks "OK", otherwise it returns null.
+                n1 = prompt("Informe um número inteiro : ");
+
+                n2 = prompt("Informe um novo número inteiro: ");
+
+                //como o prompt retorna uma String é necessário fazer a conversão. para inteiro.
+                soma= parseInt(n1) + parseInt(n2);
+
+                //documentação sobre o método getElementById: https://www.w3schools.com/jsref/met_document_getelementbyid.asp
+                document.getElementById("idResultado").value = soma;
+
+                /* Tipos de Dados em JavaScript::
+              
+                    String: utilizada para armazenar trechos de texto;
+                    Numeric (ou number): usada para armazenar todos os tipos numéricos (inteiros ou com casas decimais), facilitando as operações matemáticas.
+                    Boolen: usada para realização de teste, guarda apenas os valores true (verdadeiro) ou false (falso).  
+                */
+
+        });
+
+    </script>
+
+</html>  
