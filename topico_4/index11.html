@@ -16,6 +16,29 @@
     </head>
     <body>
         <p> 
+            Questao 1: imprimir aqui o dia do mês atual.
+            <script>document.write(data_atual.getDate())</script>
+        </p>
+
+        <p> 
+            Questao 2: imprimir aqui o mês do ano atual.
+            <script>document.write(data_atual.getMonth() + 1)</script>
+        </p>
+
+        <p> 
+            Questao 3: imprimir aqui dia e mês atual, 10/06 ou 10 de junho:
+            <script>document.write(data_atual.getDate() + "/" +
+                                   (data_atual.getMonth() + 1) )</script>
+        </p>
+
+        <p> 
+            Questao 4: imprimir aqui hora e minuto atual. ex: 09:26:
+            <script>document.write(data_atual.getHours() + ":" +
+                                    data_atual.getMinutes() )</script>
+        </p>
+
+
+        <p> 
             Data atual (estática): 08/06/2022
         </p>
 
@@ -26,6 +49,8 @@
         <p>
             <script>document.write(hora_formatada)</script>
         </p>
+
+
 
     </body>
 </html>    
