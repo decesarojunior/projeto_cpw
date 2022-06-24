@@ -1,0 +1,118 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Gerando linhas na Table - 20º Exemplo</title>
+        <script src="../topico_4/js/jquery-3.5.1.min.js"></script>
+        <style>
+            .centro{
+                margin-top: 5%;
+                margin-left:  30%;
+                margin-right: 20%;
+            }    
+            .formcontrol{
+               margin: 5px;
+               
+            }
+
+            .alinhamento{
+                width: 30%;
+                float: left;
+            }
+
+
+        </style>
+
+    </head>
+    <body>
+        <div class="centro">
+
+            <table id="tabelaAlunos" border="1">
+                <tr>
+                    <th scope="col">Código</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Curso</th>
+                    <th scope="col">Data Nascimento</th>                          
+                </tr> 
+                <tbody id="corpoTabela">
+
+                </tbody>
+
+            </table>
+
+        </div>
+        <div class="centro">
+
+            <div class="formcontrol">
+                <div class="alinhamento">
+                    <label for="inputCodigo">Código:</label>
+                </div>
+                <input type="number"  id="inputCodigo">
+            </div>
+
+            <div class="formcontrol">
+                <div class="alinhamento">
+                    <label for="inputNome">Nome:</label>
+                </div>
+                <input type="text"  id="inputNome">
+            </div>
+
+            <div class="formcontrol">
+                <div class="alinhamento">
+                    <label for="inputDTNasc">Data Nascimento:</label>
+                </div>
+                <input type="date"  id="inputDTNasc">
+            </div>
+
+            <div class="formcontrol">
+                <div class="alinhamento">
+                    <label for="selectCurso">Curso:</label>
+                </div>
+                <select id="selectCurso" name="curso">
+                    <option selected>Selecione</option>
+                    <option>Ciência da Computação</option>
+                    <option>Ciências Biológicas</option>
+                </select>
+            </div>
+
+            <div class="formcontrol">
+                <input type="button" id="btnCadastrar" value="Cadastrar">
+            </div>
+
+        </div>
+
+    </body>
+    <script type="text/javascript">
+
+        //Jquery permite para executar uma function após o click em um botão:
+        $("#btnCadastrar").click(function(){
+
+            //documentação sobre o método getElementById: https://www.w3schools.com/jsref/met_document_getelementbyid.asp
+            var tabela = document.getElementById("tabelaAlunos");
+            
+            var linha = tabela.insertRow(tabela.rows.length);
+
+            var celula0 = linha.insertCell(0);
+            celula0.innerHTML = document.getElementById("inputCodigo").value;
+
+            var celula1 = linha.insertCell(1); 
+            celula1.innerHTML = document.getElementById("inputNome").value;
+
+            var celula2 = linha.insertCell(2); 
+            celula2.innerHTML = document.getElementById("inputDTNasc").value;
+
+            var celula3 = linha.insertCell(3);
+            celula3.innerHTML = document.getElementById("selectCurso").value;
+
+            document.getElementById("inputCodigo").value = "";
+            document.getElementById("inputNome").value = "";
+            document.getElementById("inputDTNasc").value = "";
+            document.getElementById("selectCurso").value = "Selecione";
+
+           
+        });
+
+        
+
+    </script>
+
+</html>  
