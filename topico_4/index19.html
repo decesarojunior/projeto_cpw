@@ -65,8 +65,12 @@
         $("#btn6").click(function(){
 
             //documentação sobre o método getElementById: https://www.w3schools.com/jsref/met_document_getelementbyid.asp
-            var texto = document.getElementById("inputTexto").value;
-           
+            var visor = document.getElementById("inputTexto").value;
+
+            visor = visor + "6";
+
+           document.getElementById("inputTexto").value = visor;
+
         });
 
         $("#btn7").click(function(){
@@ -118,13 +122,34 @@
                 //documentacao sobre o método substring: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/substring
                 //substring: retorna uma nova string a partir de um ponto inicial e final.
                 var p1 = texto.substring(0, texto.indexOf("+"));
+                p1 = parseFloat(p1);
 
                 var p2 = texto.substring(texto.indexOf("+")+1, texto.length);
-            
-                //atualiza o input
-                document.getElementById("inputTexto").value = parseInt(p1) + parseInt(p2); 
-                                
+                p2 = parseFloat(p2);
 
+                if(isNaN(p1) || isNaN(p2)){
+
+                    alert("Valores inválidos !!!");
+
+                }else{
+
+                    //atualiza o input
+                    document.getElementById("inputTexto").value = p1 + p2; 
+               
+                }                                
+
+            }else if(texto.indexOf("*") > -1){
+
+            
+            }else if(texto.indexOf("/") > -1){
+            
+            
+            }else if(texto.indexOf("-") > -1){
+            
+            
+            }else{
+
+                alert("Operação inválida!!!")
             }
 
         });
