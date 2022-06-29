@@ -44,8 +44,14 @@
         //Jquery permite para executar uma function após o click em um botão:
         $(document).ready(function() {
 
-            var dados = [ {codigo: 1, nome: "Telmo"}, {codigo: 2, nome: "Fernanda"}];
-
+            var dados = [ {codigo: 1, nome: "Telmo", endereco: "", tel: ""}, 
+                          {codigo: 2, nome: "Fernanda", endereco: "", tel: ""},
+                          {codigo: 3, nome: "Fulano", endereco: "", tel: ""},
+                          {codigo: 4, nome: "Ciglano", endereco: "", tel: ""}
+                        ];
+            //incluir dois objetos na variavel dados
+            // incluir mais dois atributos em cada elemento da dados.
+            // imprimir na tabela os 4 valores de atributos de cada elemento
 
             var tabela = document.getElementById("tabelaAlunos");
 

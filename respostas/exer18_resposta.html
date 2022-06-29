@@ -1,0 +1,93 @@
+<html>
+
+    <!--
+        18) Com base no exemplo index20.html, implemente uma rotina
+         em javascript para receber 10 valores inteiros via prompt. 
+        Esses dados deverão ser armazenados da seguinte forma:
+         os cinco primeiro valores deverão ser armazenados em um vetor. 
+        Os demais valores em um segundo vetor.
+         Em seguida, imprimir em dois textarea os valores pares e impares.
+    -->
+    <head>
+        <meta charset="utf-8">
+        <title>resposta para o exercício 18</title>
+        <script src="../topico_4/js/jquery-3.5.1.min.js"></script>
+        <style>
+            .centro{
+                margin-top: 5%;
+                margin-left:  30%;
+                margin-right: 20%;
+            }    
+            .formcontrol{
+               margin: 5px;
+               
+            }
+
+            .alinhamento{
+                width: 30%;
+                float: left;
+            }
+
+
+        </style>
+
+    </head>
+    <body>
+        <div class="centro">          
+            <label for="pares">Resultado pares:</label>
+            <textarea id="pares" rows="15" cols="10"></textarea>            
+        </div>
+        <div class="centro">          
+            <label for="impares">Resultado impares:</label>
+            <textarea id="impares" rows="15" cols="10"></textarea>            
+        </div>
+
+    </body>
+    <script type="text/javascript">
+
+        //Jquery permite para executar uma function após o click em um botão:
+        $(document).ready(function() {
+
+            var dados1 = []; 
+            var dados2 = [];
+
+            for(var i=0; i < 5; i++){
+                dados1[i] = prompt("dados1: Digite um valor inteiro:");        
+            }
+
+            for(var i=0; i < 5; i++){
+                dados2[i] = prompt("dados2: Digite um valor inteiro:");
+            }
+
+            for(var i=0; i < 5; i++){
+                    if(parseInt(dados1[i]) % 2 == 0 ){
+                        var txa = document.getElementById("pares").value;
+                        txa = txa + dados1[i] + "\n";
+                        document.getElementById("pares").value = txa;
+                    }else{
+                        var txa = document.getElementById("impares").value;
+                        txa = txa + dados1[i] + "\n";
+                        document.getElementById("impares").value = txa;
+                    }
+
+                    if(parseInt(dados2[i]) % 2 == 0 ){
+                        var txa = document.getElementById("pares").value;
+                        txa = txa + dados2[i] + "\n";
+                        document.getElementById("pares").value = txa;
+                    }else{
+                        var txa = document.getElementById("impares").value;
+                        txa = txa + dados2[i] + "\n";
+                        document.getElementById("impares").value = txa;
+                    }
+            }
+            
+          
+
+
+        });
+
+        
+
+    </script>
+
+</html>
