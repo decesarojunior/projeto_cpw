@@ -87,27 +87,42 @@
         $("#btnCadastrar").click(function(){
 
             //documentação sobre o método getElementById: https://www.w3schools.com/jsref/met_document_getelementbyid.asp
-            var tabela = document.getElementById("tabelaAlunos");
-            
-            var linha = tabela.insertRow(tabela.rows.length);
+           //alert(document.getElementById("inputDTNasc").value.trim().length);
 
-            var celula0 = linha.insertCell(0);
-            celula0.innerHTML = document.getElementById("inputCodigo").value;
+            if(document.getElementById("inputCodigo").value > 0 &&
+              document.getElementById("inputNome").value.trim().length > 0 &&
+              document.getElementById("inputDTNasc").value.trim().length == 10 &&
+              document.getElementById("selectCurso").value != "Selecione"
+             ){
 
-            var celula1 = linha.insertCell(1); 
-            celula1.innerHTML = document.getElementById("inputNome").value;
+                var tabela = document.getElementById("tabelaAlunos");
+                
+                var linha = tabela.insertRow(tabela.rows.length);
 
-            var celula2 = linha.insertCell(2); 
-            celula2.innerHTML = document.getElementById("inputDTNasc").value;
+                var celula0 = linha.insertCell(0);
+                celula0.innerHTML = document.getElementById("inputCodigo").value;
 
-            var celula3 = linha.insertCell(3);
-            celula3.innerHTML = document.getElementById("selectCurso").value;
+                var celula1 = linha.insertCell(1);
+                //metodo trim(0 : remove os espaços em branco antes e/ou depois.) 
+                celula1.innerHTML = document.getElementById("inputNome").value.trim();
 
-            document.getElementById("inputCodigo").value = "";
-            document.getElementById("inputNome").value = "";
-            document.getElementById("inputDTNasc").value = "";
-            document.getElementById("selectCurso").value = "Selecione";
+                var celula2 = linha.insertCell(2); 
+                celula2.innerHTML = document.getElementById("selectCurso").value;
 
+                var celula3 = linha.insertCell(3);
+                celula3.innerHTML = document.getElementById("inputDTNasc").value;
+
+                document.getElementById("inputCodigo").value = "";
+                document.getElementById("inputNome").value = "";
+                document.getElementById("inputDTNasc").value = "";
+                document.getElementById("selectCurso").value = "Selecione";
+
+           }else{
+                alert('Preencha todos os campos do formulário  !!');
+           }
+           
+           
+         
            
         });
 

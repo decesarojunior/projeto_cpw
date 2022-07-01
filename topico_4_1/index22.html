@@ -29,7 +29,9 @@
             <table id="tabelaAlunos" border="1">
                 <tr>
                     <th scope="col">Código</th>
-                    <th scope="col">Nome</th>                    
+                    <th scope="col">Nome</th>        
+                    <th scope="col">Endereço</th>
+                    <th scope="col">Telefone</th>                 
                 </tr> 
                 <tbody id="corpoTabela">                  
                 </tbody>
@@ -52,17 +54,21 @@
             //incluir dois objetos na variavel dados
             // incluir mais dois atributos em cada elemento da dados.
             // imprimir na tabela os 4 valores de atributos de cada elemento
-
             var tabela = document.getElementById("tabelaAlunos");
 
             for(var i=0; i < dados.length; i++){
-            
                 var linha = tabela.insertRow(tabela.rows.length);
                 var celula0 = linha.insertCell(0);
                 celula0.innerHTML = dados[i].codigo;
 
                 var celula1 = linha.insertCell(1); 
                 celula1.innerHTML = dados[i].nome;
+
+                var celula2 = linha.insertCell(2); 
+                celula2.innerHTML = dados[i].endereco;
+
+                var celula3 = linha.insertCell(3); 
+                celula3.innerHTML = dados[i].tel;
             
             }                    
         });
