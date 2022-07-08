@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Table, funções e parâmetros - 25º Exemplo</title>
+        <title>Table, funções e parâmetros - Resposta para o exercício 22</title>
         <script src="../topico_4/js/jquery-3.5.1.min.js"></script>
         <style>
             .centro{
@@ -30,10 +30,10 @@
                 <tr>
                     <th scope="col">Código</th>
                     <th scope="col">Nome</th>
-                    <th scope="col">Curso</th>
                     <th scope="col">Data Nascimento</th>  
-                    <th scope="col">Remover</th>
-                    <th scope="col">Editar</th>                                 
+                    <th scope="col">Curso</th>
+                    <th scope="col">Editar</th>
+                    <th scope="col">Remover</th>                                 
                 </tr> 
                 <tbody id="corpoTabela">
 
@@ -48,7 +48,7 @@
                 <div class="alinhamento">
                     <label for="inputCodigo">Código:</label>
                 </div>
-                <input type="number"  id="inputCodigo">
+                <input type="number"  id="inputCodigo" disabled>
             </div>
 
             <div class="formcontrol">
@@ -78,8 +78,9 @@
 
             <div class="formcontrol">
                 <input type="button" id="btnCadastrar" value="Cadastrar">
-                <input type="button" id="btnAtualizar" value="Atualizar Tabela">
             </div>
+
+            <input type="hidden"  id="inputIndice">
 
         </div>
 
@@ -123,24 +124,25 @@
                 var celula3 = linha.insertCell(3);
                 celula3.innerHTML = dados[i].curso;
 
-                var celula4 = linha.insertCell(4);
-                celula4.innerHTML = "<input type=\"button\" onclick=\"remover("+i+")\" value=\"Remover\">";
-
-                var celula5 = linha.insertCell(5);
+                var celula5 = linha.insertCell(4);
                 celula5.innerHTML = "<input type=\"button\" onclick=\"editar("+i+")\" value=\"Editar\">";
 
+                var celula4 = linha.insertCell(5);
+                celula4.innerHTML = "<input type=\"button\" onclick=\"remover("+i+")\" value=\"Remover\">";
 
             }
         
         }
         function editar(indice){
         
+            //recupera as informações do vetor dados, com base no indice e insere no formulário.
+            document.getElementById("inputIndice").value = indice;
             document.getElementById("inputCodigo").value = dados[indice].codigo;
+            document.getElementById("inputNome").value =  dados[indice].nome;
+            document.getElementById("inputDTNasc").value =  dados[indice].datanascimento;
+            document.getElementById("selectCurso").value =  dados[indice].curso;
 
         }
-
-
-
 
         //indice: representa o parametro da funcao remover
         //parametros são informaçoes que devem ser fornecidas
@@ -155,14 +157,18 @@
             // o 1 representa a quantidade de elementos que serão removidos
             dados.splice(indice, 1);
 
+            //chama a funcao para remover as linas da table
             limpaTabela();
 
+            //chama a funcao para gerar as linhas na tabela.
             populaTabela();
-
 
         }
 
         function resetFormulario(){
+
+            //o inputIndice é um input do tipo hidden, ou seja, ele é oculto e serve para manter uma determinada informação
+            document.getElementById("inputIndice").value = "";
 
             document.getElementById("inputCodigo").value = "";
             document.getElementById("inputNome").value = "";
@@ -175,23 +181,60 @@
 
             //documentação sobre o método getElementById: https://www.w3schools.com/jsref/met_document_getelementbyid.asp
             
-            var aluno = {"codigo": document.getElementById("inputCodigo").value,
-                         "nome"  : document.getElementById("inputNome").value,
-                         "datanascimento" : document.getElementById("inputDTNasc").value,
-                         "curso" : document.getElementById("selectCurso").value};
+            if(document.getElementById("inputNome").value.trim().length > 0 && 
+               document.getElementById("inputDTNasc").value.length == 10 &&
+               document.getElementById("selectCurso").value != "Selecione"){
 
-            dados.push(aluno);  
+                //se for um numero o codigo ai faz update (alteracao no registro existente)
+                if(!isNaN(parseInt(document.getElementById("inputCodigo").value))) {
 
-            resetFormulario();
+                    //alterar um determinado elemento do vetor dados de acordo com o indice.
+                    //a informação do indice é gerada com o clique no botão Editar.
+                    dados[document.getElementById("inputIndice").value].nome =  document.getElementById("inputNome").value;
+                    dados[document.getElementById("inputIndice").value].datanascimento =  document.getElementById("inputDTNasc").value;
+                    dados[document.getElementById("inputIndice").value].curso =  document.getElementById("selectCurso").value;
+                    
+                    alert("Registro existente alterado !!");
+
+                }else{
+
+                    //gera o proximo valor com base no tamanho do vetor dados.
+                    var proximo_codigo;
+                    if(dados.length == 0){
+                        //se o tamanho do vetor for zero, o primeiro codigo sera 1.
+                        proximo_codigo = 1
+                    }else{
+                        //se o vetor contiver elementos, recupera o codigo od último elemento e soma mais 1. 
+                        var ultimo_elemento = dados[dados.length - 1]; 
+                        proximo_codigo = ultimo_elemento.codigo + 1;
+                    }
+
+                    var aluno = {"codigo": proximo_codigo,
+                                "nome"  : document.getElementById("inputNome").value,
+                                "datanascimento" : document.getElementById("inputDTNasc").value,
+                                "curso" : document.getElementById("selectCurso").value};
+
+                    //adiciona um elemento no final do vetor.            
+                    dados.push(aluno);  
+
+                    alert("Novo registro inserido !!");
+
+
+                }
+                //chama a funcao que irá limpar os campos do formulário
+                resetFormulario();
+
+                //chama a funcao que ira remover as linhas da table
+                limpaTabela();
+
+                //chama a funcao que ira gerar as linhas na table de acordo com os elementos do vetor dados.
+                populaTabela();
+
+
+            }else{
+                alert('Preencha o formulário !!!');
+            }
            
-        });
-
-        $("#btnAtualizar").click(function(){
-
-            limpaTabela();
-
-            populaTabela();
-
         });
 
         

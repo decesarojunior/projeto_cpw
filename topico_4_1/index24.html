@@ -143,17 +143,19 @@
                          "datanascimento" : document.getElementById("inputDTNasc").value,
                          "curso" : document.getElementById("selectCurso").value};
 
+            // metodo push: adiciona um elemento no final do vetor.
             dados.push(aluno);  
 
-            resetFormulario();
+            resetFormulario();//chamada da funcao.
+
            
         });
 
         $("#btnAtualizar").click(function(){
 
-            limpaTabela();
+            limpaTabela();//chama a funcao limpaTabela()
 
-            populaTabela();
+            populaTabela();//chama a funcao populaTabela()
 
         });
 
